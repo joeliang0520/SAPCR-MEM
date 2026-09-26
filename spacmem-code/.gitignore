@@ -1,0 +1,12 @@
+# Credentials
+.env
+
+# Data: the benchmark release, the ScanNet-derived scene records, the reconstructions.
+# None of it is ours to redistribute and all of it is large. See README for how to obtain it.
+data/
+
+# Run outputs: every answered question, cached replies, logs.
+runs/
+
+__pycache__/
+*.pyc

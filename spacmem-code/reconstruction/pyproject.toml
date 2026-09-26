@@ -1,0 +1,24 @@
+[project]
+name = "video-world-state"
+version = "0.1.0"
+description = "Persistent 3D objects from RGB video: geometry, segmentation and object construction."
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "Pillow"]
+
+[project.optional-dependencies]
+alignment = ["open3d>=0.19"]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+video_world_state = ["adapters/*.yaml", "adapters/_da3_determinism/*.py"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
